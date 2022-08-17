@@ -1,0 +1,8 @@
+CREATE OR ALTER PROCEDURE [dbo].[spui_WebPagesList]
+AS
+BEGIN
+ SELECT *
+ FROM WebPages W WITH (NOLOCK)
+END
+
+GO
