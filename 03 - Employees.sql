@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[Employees](
 	[ImagesID] [int] NULL,
 	[ShowBirthday] [bit] NOT NULL DEFAULT 1,
 	[StateEmployee] [bit] NULL DEFAULT 1,
-	[MessengerNumber] [varchar](32) NULL,
+	[MessengerNumber] [varchar](32) NULL
  )
 
 GO
