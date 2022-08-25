@@ -7,7 +7,7 @@ CREATE TABLE [dbo].[IncomingWebMessages](
 	[SubmiterIPAdress] [varchar](32) NULL,
 	[Readed] [bit] NOT NULL DEFAULT 0,
 	[ADate] [datetime] NOT NULL DEFAULT GETDATE(),
-	[SystemMessage] [bit] NOT NULL DEFAULT 0,
+	[SystemMessage] [bit] NOT NULL DEFAULT 0
 )
 
 GO
