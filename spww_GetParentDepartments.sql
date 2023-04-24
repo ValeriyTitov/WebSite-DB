@@ -18,13 +18,12 @@ CREATE OR ALTER PROCEDURE [dbo].[spww_GetParentDepartments] @DepartmentPositions
    
    SELECT C.*,  Depth+1 AS Depth
    FROM DepartmentPositions c WITH (NOLOCK)
-   INNER JOIN Rec p on C.DepartmentPositionsID = P.OwnerID AND C.DepartmentPositionsID<>IsNull(C.OwnerID,0) 
+   INNER JOIN Rec p on C.DepartmentPositionsID = P.OwnerID 
 ) 
 
 
 SELECT *
 FROM Rec
-WHERE ItemType=1
 ORDER BY [Depth] DESC
 
 END
