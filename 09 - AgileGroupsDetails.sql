@@ -5,3 +5,8 @@ AgileGroupsId INT NOT NULL FOREIGN KEY (AgileGroupsId) REFERENCES AgileGroups(Ag
 EmployeesId INT NOT NULL FOREIGN KEY (EmployeesId) REFERENCES Employees(EmployeesId) INDEX idx_EmployeesId,
 OrderId INT NOT NULL
 )
+
+
+GO
+
+
