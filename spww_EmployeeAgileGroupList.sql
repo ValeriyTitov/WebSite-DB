@@ -11,3 +11,6 @@ INNER JOIN AgileGroups A WITH (NOLOCK) ON A.AgileGroupsId=D.AgileGroupsId
 WHERE D.EmployeesId= @EmployeesID
 	
 END
+
+GO
+
