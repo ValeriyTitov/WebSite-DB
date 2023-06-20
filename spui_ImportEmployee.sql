@@ -1,4 +1,4 @@
-CREATE PROCEDURE [dbo].[spui_ImportEmployee]
+CREATE OR ALTER PROCEDURE [dbo].[spui_ImportEmployee]
   @FullName varchar(255),
   @BirthDate datetime = NULL,
   @Gender bit = 0,
