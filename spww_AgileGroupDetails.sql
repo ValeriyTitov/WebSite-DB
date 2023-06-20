@@ -31,3 +31,6 @@ WHERE E.Active=1 AND A.AgileGroupsId=@AgileGroupsId
 ORDER BY A.OrderId
 END
 
+GO
+
+
