@@ -23,7 +23,7 @@ SELECT        e.EmployeesID,
 			  e.EMail, 
 			  e.ImagesID,
 			  @AgileGroupCount as AgileGroupCount,
-			  IsNULL(e.MessengerNumber,'<Žòñóòñòâóåò>') as [MessengerNumber]
+			  IsNULL(e.MessengerNumber,'<Å½Ã²Ã±Ã³Ã²Ã±Ã²Ã¢Ã³Ã¥Ã²>') as [MessengerNumber]
 
               
 
@@ -33,4 +33,6 @@ WHERE E.EmployeesID=@EmployeesID
 
 	
 END
+
+GO
 
