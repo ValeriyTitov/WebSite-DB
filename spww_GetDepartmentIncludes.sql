@@ -20,3 +20,6 @@ FROM    ret
 WHERE ItemType=1
 ORDER BY Depth, OrderID
 END
+
+GO
+
