@@ -1,6 +1,15 @@
 CREATE OR ALTER PROCEDURE [dbo].[spww_GetEmployeeDetails] @EmployeesID int
 AS
 BEGIN
+
+DECLARE @AgileGroupCount int;
+
+SELECT @AgileGroupCount = COUNT(1)
+FROM AgileGroupsDetails A WITH(NOLOCK)
+WHERE A.EmployeesId=@EmployeesID
+
+
+
 SELECT        e.EmployeesID, 
               e.DepartmentPositionsID, 
 			  e.ADate, 
@@ -13,15 +22,15 @@ SELECT        e.EmployeesID,
 			  e.MobilePhone, 
 			  e.EMail, 
 			  e.ImagesID,
-			  IsNULL(e.MessengerNumber,'<Отсутствует>') as [MessengerNumber]
+			  @AgileGroupCount as AgileGroupCount,
+			  IsNULL(e.MessengerNumber,'<Ћтсутствует>') as [MessengerNumber]
+
+              
 
 FROM          Employees AS e WITH (NOLOCK)
-              LEFT OUTER JOIN  DepartmentPositions AS ep WITH (NOLOCK) ON e.DepartmentPositionsID = ep.DepartmentPositionsID
+              LEFT JOIN  DepartmentPositions AS ep WITH (NOLOCK) ON e.DepartmentPositionsID = ep.DepartmentPositionsID
 WHERE E.EmployeesID=@EmployeesID
 
 	
 END
-
-GO
-
 
